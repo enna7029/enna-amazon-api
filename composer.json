@@ -1,0 +1,34 @@
+{
+    "name": "enna/enna-amazon-api",
+    "description": "A PHP library for connecting to Amazon's Selling Partner API.",
+    "keywords": [
+      "api",
+      "selling-partner-api",
+      "amazon",
+      "ecommerce",
+      "sp-api",
+      "sdk",
+      "rest",
+      "api"
+    ],
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "王龙",
+            "email": "w1069103107@outlook.com"
+        }
+    ],
+    "require": {
+      "php": ">=7.3",
+      "ext-curl": "*",
+      "ext-json": "*",
+      "ext-mbstring": "*",
+      "guzzlehttp/guzzle": "^6.0|^7.0"
+    },
+    "autoload": {
+      "psr-4":{
+        "Enna\\AmazonApi\\":"src"
+      }
+    }
+}
