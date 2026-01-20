@@ -5,37 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbf18ca7-4025-42cd-b7f3-67efdd6fd5b8" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Api/BaseApi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Api/Fulfillment/Outbound/V2020_07_01/FbaOutboundApi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Api/Token/V2021_03_01/TokenApi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ApiException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Authentication.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AuthorizationSigner.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ContentType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Contract/AuthorizationSignerContract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Contract/RequestSignerContract.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Credentials.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Endpoint.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/FeedType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/HeaderSelector.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/BaseModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/Address.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/FeatureSettings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/GetFulfillmentPreviewItem.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/GetFulfillmentPreviewRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/Money.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/ShippingSpeedCategory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/ModelInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Token/V2021_03_01/CreateRestrictedDataTokenRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Token/V2021_03_01/CreateRestrictedDataTokenResponse.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Token/V2021_03_01/Error.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Token/V2021_03_01/ErrorList.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Model/Token/V2021_03_01/RestrictedResource.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ObjectSerializer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ReportType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ScopeConstants.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Configuration.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Configuration.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/DeliveryWindow.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/Error.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/Fee.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/FulfillmentPreview.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/FulfillmentPreviewItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/FulfillmentPreviewShipment.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/GetFulfillmentPreviewResponse.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/GetFulfillmentPreviewResult.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/ScheduledDeliveryInfo.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/UnfulfillablePreviewItem.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/Weight.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/BaseApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/BaseApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Api/Fulfillment/Outbound/V2020_07_01/FbaOutboundApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Api/Fulfillment/Outbound/V2020_07_01/FbaOutboundApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApiException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApiException.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Endpoint.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Endpoint.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/Address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/FeatureSettings.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Fulfillment/Outbound/V2020_07_01/FeatureSettings.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ObjectSerializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/ObjectSerializer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,22 +65,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "D:/code/enna-amazon-api",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/code/enna-amazon-api&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -109,7 +97,10 @@
       <option name="presentableId" value="Default" />
       <updated>1766053536450</updated>
       <workItem from="1766053537362" duration="55864000" />
-      <workItem from="1766972897655" duration="27843000" />
+      <workItem from="1766972897655" duration="28110000" />
+      <workItem from="1767662370615" duration="429000" />
+      <workItem from="1767662826620" duration="32213000" />
+      <workItem from="1768180860026" duration="15776000" />
     </task>
     <servers />
   </component>

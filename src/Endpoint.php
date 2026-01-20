@@ -86,6 +86,13 @@ class Endpoint
             'A2NODRKZP88ZB9' => 'EU',
             // Turkey.
             'A33AVAJ2PDY3EV' => 'EU',
+            // Far East.
+            // Singapore.
+            'A19VAU5U5O7RUS' => 'FE',
+            // Australia.
+            'A39IBJ37TRP1C6' => 'FE',
+            // Japan.
+            'A1VC38T7YXB528' => 'FE',
         ];
 
         if (!isset($map[$marketplaceId])) {

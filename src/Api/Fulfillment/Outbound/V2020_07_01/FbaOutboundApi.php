@@ -4,6 +4,7 @@ namespace Enna\AmazonApi\Api\Fulfillment\Outbound\V2020_07_01;
 
 use Enna\AmazonApi\Api\BaseApi;
 use Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\GetFulfillmentPreviewRequest;
+use Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\GetFulfillmentPreviewResponse;
 use Enna\AmazonApi\ApiException;
 use Enna\AmazonApi\ObjectSerializer;
 use GuzzleHttp\Exception\RequestException;
@@ -17,7 +18,7 @@ class FbaOutboundApi extends BaseApi
     /**
      * 操作 getFulfillmentPreview
      * @param GetFulfillmentPreviewRequest $body
-     * @return null
+     * @return mixed
      */
     public function getFulfillmentPreview($body)
     {
@@ -28,7 +29,7 @@ class FbaOutboundApi extends BaseApi
 
     /**
      * @param GetFulfillmentPreviewRequest $body
-     * @return void
+     * @return mixed
      */
     public function getFulfillmentPreviewWithHttpInfo($body)
     {
@@ -73,12 +74,23 @@ class FbaOutboundApi extends BaseApi
             }
 
             $responseBody = $response->getBody();
-
-            echo 1234;
-            exit;
-
+            $returnType = '\Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\GetFulfillmentPreviewResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody;
+            } else {
+                $content = (string)$responseBody;
+            }
+            print_r($content);exit;
+            return ObjectSerializer::deserialize($content, $returnType, $response->getHeaders());
         } catch (ApiException $e) {
-            throw new ApiException($e->getMessage());
+            $data = ObjectSerializer::deserialize(
+                $e->getResponseBody(),
+                '\Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\GetFulfillmentPreviewResponse',
+                $e->getResponseHeaders()
+            );
+            $e->setResponseObject($data);
+
+            throw $e;
         }
     }
 

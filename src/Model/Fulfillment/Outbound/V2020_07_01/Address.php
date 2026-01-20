@@ -67,7 +67,7 @@ class Address extends BaseModel implements ModelInterface, ArrayAccess, JsonSeri
     ];
 
     protected static $getters = [
-        'name' => 'setName',
+        'name' => 'getName',
         'address_line1' => 'getAddressLine1',
         'address_line2' => 'getAddressLine2',
         'address_line3' => 'getAddressLine3',

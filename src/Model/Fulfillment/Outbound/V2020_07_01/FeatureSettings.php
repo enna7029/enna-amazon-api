@@ -64,14 +64,11 @@ class FeatureSettings extends BaseModel implements ModelInterface, ArrayAccess, 
     public function listInvalidProperties(): array
     {
         $invalidProperties = [];
-        if ($this->container['feature_name'] === null) {
-            $invalidProperties[] = "'feature_name' can't be null";
-        }
-        if ($this->container['feature_fulfillment_policy'] === null) {
-            $invalidProperties[] = "'feature_fulfillment_policy' can't be null";
-        }
         $allowedValues = $this->getFeatureFulfillmentPolicyAllowableValues();
-        if (!in_array($this->container['feature_fulfillment_policy'], $allowedValues)) {
+        if (
+            !is_null($this->container['feature_fulfillment_policy'])
+            && !in_array($this->container['feature_fulfillment_policy'], $allowedValues)
+        ) {
             $invalidProperties[] = sprintf(
                 "invalid value '%s' for 'feature_fulfillment_policy', must be one of '%s'",
                 $this->container['feature_fulfillment_policy'],

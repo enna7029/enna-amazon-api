@@ -18,4 +18,24 @@ class ApiException extends Exception
         $this->responseHeaders = $responseHeaders;
         $this->responseBody = $responseBody;
     }
+
+    public function getResponseHeaders()
+    {
+        return $this->responseHeaders;
+    }
+
+    public function getResponseBody()
+    {
+        return $this->responseBody;
+    }
+
+    public function getResponseObject()
+    {
+        return $this->responseObject;
+    }
+
+    public function setResponseObject($responseObject)
+    {
+        $this->responseHeaders = $responseObject;
+    }
 }

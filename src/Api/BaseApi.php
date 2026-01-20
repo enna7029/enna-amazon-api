@@ -28,7 +28,7 @@ abstract class BaseApi
      */
     protected $headerSelector;
 
-    public function __construct(Configuration $config, ClientInterface $client, HeaderSelector $selector)
+    public function __construct(Configuration $config, ClientInterface $client = null, HeaderSelector $selector = null)
     {
         $this->config = $config;
         $this->client = $client ?: new Client();
@@ -52,7 +52,7 @@ abstract class BaseApi
     {
         $option = [];
         if ($this->config->getDebug()) {
-            $option[RequestOptions::DEBUG] = $this->config->getDebug();
+            $option[RequestOptions::DEBUG] = fopen($this->config->getDebugFile(),'a+');
             if (!$option[RequestOptions::DEBUG]) {
                 throw new \RuntimeException('Failed to open the debug file: ' . $this->config->getDebugFile());
             }
