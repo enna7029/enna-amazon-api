@@ -58,7 +58,10 @@ class FeatureSettings extends BaseModel implements ModelInterface, ArrayAccess, 
             self::FEATURE_FULFILLMENT_POLICY_NOT_REQUIRED
         ];
 
-        return $baseValues;
+        $ucVals = array_map(function ($val) {
+            return strtoupper($val);
+        }, $baseValues);
+        return array_merge($baseValues, $ucVals);
     }
 
     public function listInvalidProperties(): array

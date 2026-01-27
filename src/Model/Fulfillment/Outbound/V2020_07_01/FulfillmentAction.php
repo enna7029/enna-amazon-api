@@ -2,27 +2,19 @@
 
 namespace Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01;
 
-use InvalidArgumentException;
-
-class ShippingSpeedCategory
+class FulfillmentAction
 {
     public $value;
 
-    const STANDARD = 'Standard';
+    const SHIP = 'Ship';
 
-    const EXPEDITED = 'Expedited';
-
-    const PRIORITY = 'Priority';
-
-    const SCHEDULED_DELIVERY = 'ScheduledDelivery';
+    const HOLD = 'Hold';
 
     public static function getAllowableEnumValues()
     {
         $baseValues = [
-            self::STANDARD,
-            self::EXPEDITED,
-            self::PRIORITY,
-            self::SCHEDULED_DELIVERY,
+            self::SHIP,
+            self::HOLD,
         ];
         $ucVals = array_map(function ($val) {
             return strtoupper($val);
@@ -33,7 +25,7 @@ class ShippingSpeedCategory
     public function __construct($value)
     {
         if (is_null($value) || !in_array($value, self::getAllowableEnumValues())) {
-            throw new InvalidArgumentException(sprintf("Invalid value %s for enum 'ShippingSpeedCategory', must be one of '%s'", $value, implode("', '", self::getAllowableEnumValues())));
+            throw new InvalidArgumentException(sprintf("Invalid value %s for enum 'FulfillmentAction', must be one of '%s'", $value, implode("', '", self::getAllowableEnumValues())));
         }
 
         $this->value = $value;

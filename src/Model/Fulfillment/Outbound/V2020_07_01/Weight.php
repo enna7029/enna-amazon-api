@@ -70,14 +70,17 @@ class Weight extends BaseModel implements ModelInterface, ArrayAccess, JsonSeria
 
     public function getUnitAllowValues()
     {
-        $baseVals = [
+        $baseValues = [
             self::UNIT_KG,
             self::UNIT_KILOGRAMS,
             self::UNIT_LB,
             self::UNIT_POUNDS
         ];
 
-        return $baseVals;
+        $ucVals = array_map(function ($val) {
+            return strtoupper($val);
+        }, $baseValues);
+        return array_merge($baseValues, $ucVals);
     }
 
     public function getUnit()

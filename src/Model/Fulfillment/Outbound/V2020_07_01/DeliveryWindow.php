@@ -15,13 +15,13 @@ class DeliveryWindow extends BaseModel implements ModelInterface, ArrayAccess, J
     protected static $openAPIModelName = 'DeliveryWindow';
 
     protected static $openAPITypes = [
-        'startDate' => 'string',
-        'endDate' => 'string',
+        'start_date' => 'string',
+        'end_date' => 'string',
     ];
 
     protected static $openAPIFormats = [
-        'startDate' => null,
-        'endDate' => null,
+        'start_date' => null,
+        'end_date' => null,
     ];
 
     protected static $attributeMap = [
