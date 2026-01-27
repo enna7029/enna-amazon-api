@@ -1,37 +1,6 @@
-<?php
-
-namespace app\index\controller;
-
-use Enna\AmazonApi\Configuration;
-use Enna\AmazonApi\Endpoint;
-use Enna\AmazonApi\Api\Fulfillment\Outbound\V2020_07_01\FbaOutboundApi;
-use Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\GetFulfillmentPreviewRequest;
-use Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\Address;
-use Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\GetFulfillmentPreviewItem;
-use Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\Money;
-use Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\ShippingSpeedCategory;
-use Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\FeatureSettings;
-use Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\CreateFulfillmentOrderRequest;
-use Enna\AmazonApi\Model\Fulfillment\Outbound\V2020_07_01\CreateFulfillmentOrderItem;
-
-class AmzSellerPartnerApiByOutBound
-{
-    public $spApiConfig;
-
-    public function __construct($spApiConfig)
-    {
-//        $spApiConfig = [
-//            'client_id' => '',
-//            'client_secret' => '',
-//            'access_key' => '',
-//            'secret_key' => '',
-//            'role_arn' => '',
-//            'new_aws_refresh_token' => '',
-//        ];
-        $this->spApiConfig = $spApiConfig;
-    }
-
-    /**
+## 获取订单预览信息
+```php
+ /**
      * 获取订单预览信息
      * @return void
      * @throws \Exception
@@ -83,16 +52,11 @@ class AmzSellerPartnerApiByOutBound
         $res = $fbaOutboundApi->getFulfillmentPreview($getFulfillmentPreviewRequest);
         print_r($res);
         exit;
-    }
+```
 
-    /**
-     * 创建订单
-     * @return void
-     * @throws \Exception
-     */
-    public function createFulfillmentOrder()
-    {
-        //配置信息
+## 创建订单
+```php
+//配置信息
         $configuration = new Configuration([
             "lwaClientId" => $this->spApiConfig['client_id'],
             "lwaClientSecret" => $this->spApiConfig['client_secret'],
@@ -136,16 +100,11 @@ class AmzSellerPartnerApiByOutBound
         $res = $fbaOutboundApi->createFulfillmentOrder($createFulfillmentOrderRequest);
         print_r($res);
         exit;
-    }
+```
 
-    /**
-     * 获取订单信息
-     * @return void
-     * @throws \Enna\AmazonApi\ApiException
-     */
-    public function getFulfillmentOrder()
-    {
-        //配置信息
+## 获取订单信息
+```php
+//配置信息
         $configuration = new Configuration([
             "lwaClientId" => $this->spApiConfig['client_id'],
             "lwaClientSecret" => $this->spApiConfig['client_secret'],
@@ -164,15 +123,11 @@ class AmzSellerPartnerApiByOutBound
         $res = $fbaOutboundApi->getFulfillmentOrder($seller_fulfillment_order_id);
         print_r($res);
         exit;
-    }
+```
 
-    /**
-     * 取消订单
-     * @return void
-     */
-    public function cancelFulfillmentOrder()
-    {
-        //配置信息
+## 取消订单
+```php
+//配置信息
         $configuration = new Configuration([
             "lwaClientId" => $this->spApiConfig['client_id'],
             "lwaClientSecret" => $this->spApiConfig['client_secret'],
@@ -191,5 +146,4 @@ class AmzSellerPartnerApiByOutBound
         $res = $fbaOutboundApi->cancelFulfillmentOrder($seller_fulfillment_order_id);
         print_r($res);
         exit;
-    }
-}
+```
